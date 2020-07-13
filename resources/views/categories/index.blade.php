@@ -7,6 +7,9 @@
     </div>
 
     <div class="card card-default">
+        {{-- En esta vista se recibe una coleccion de categories para ser listados, de no haber, se muestra el mensaje
+        "No categories yet" --}}
+
         <div class="card-header">Categories</div>
         <div class="card-body">
 
