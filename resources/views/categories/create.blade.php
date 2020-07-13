@@ -11,7 +11,7 @@
         <div class="card-body">
             {{-- Si desde el controlador es enviada data, el formulario cambiara su estado a Editar,
             de lo contrario, el estado default es el de crear post --}}
-            
+
             {!! Form::open(array('route' => isset($category) ? ['categories.update', $category->id] : 'categories.store')) !!}
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -29,6 +29,8 @@
                     @method('PUT')    
                 @endif
                 <div class="form-group">
+                    {{-- Nombre de la categoria --}}
+                    
                     {!! Form::label("name", "Name", []) !!}
                     {!! Form::text("name",isset($category) ? $category->name : "",["id" => "name", "class" => "form-control"]) !!}
                 </div>
