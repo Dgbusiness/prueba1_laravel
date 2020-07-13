@@ -11,7 +11,7 @@
             {{-- Si desde el controlador es enviada data, el formulario cambiara su estado a Editar,
             de lo contrario, el estado default es el de crear post --}}
 
-            {!! Form::open(array('route' => isset($Post) ? ['posts.update', $Post->id] : 'posts.store', "enctype" => "multipart/form-data")) !!}
+            {!! Form::open(array('route' => isset($post) ? ['posts.update', $post->id] : 'posts.store', "enctype" => "multipart/form-data")) !!}
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul class="list-group">

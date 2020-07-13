@@ -13,7 +13,7 @@ class UpdatePostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,9 @@ class UpdatePostRequest extends FormRequest
     {
         return [
             //
+            'title' => 'required|unique:posts',   
+            'description' => 'required',  
+            'content' => 'required',
         ];
     }
 }
