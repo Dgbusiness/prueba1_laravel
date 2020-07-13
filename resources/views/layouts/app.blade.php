@@ -80,6 +80,11 @@
             </div>
         </nav>
 
+        {{-- Esta es una plantilla que todas las vistas de laravel tienen que seguir.
+        Solo habran 3 botones principalmente:
+        Post: lista de post
+        Categories: lista de categorias
+        Trashed posts: post que se hayan "borrado" --}}
         <main class="py-4">
             <div class="container">
                 @if (session()->has('success'))
